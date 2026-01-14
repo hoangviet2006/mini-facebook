@@ -20,7 +20,8 @@ Mỗi người cần **tạo Redis riêng** và cấu hình biến môi trườn
 set REDIS_HOST=open-leopard-10637.upstash.io
 set REDIS_PORT=6379
 set REDIS_PASSWORD=<YOUR_UPSTASH_REDIS_PASSWORD>
-#### PowerShell
+
+#### CMD
 ```powerShell
 $env:REDIS_HOST="open-leopard-10637.upstash.io"
 $env:REDIS_PORT="6379"
