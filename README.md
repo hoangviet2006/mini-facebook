@@ -16,6 +16,7 @@ Mỗi người cần **tạo Redis riêng** và cấu hình biến môi trườn
 ### 2. Thiết lập biến môi trường (Windows)
 
 
+
 #### CMD
 ```cmd
 set REDIS_HOST=open-leopard-10637.upstash.io
