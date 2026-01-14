@@ -1,0 +1,473 @@
+/* ===================================
+   FB HEADER - CLEAN & FIXED
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    background: #f4f3ff;
+    color: #1e1b4b;
+}
+
+
+.fb-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 64px;
+    background: #F5F6F8;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    z-index: 1000;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 2rem;
+}
+
+/* ================= LOGO ================= */
+.fb-header-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    user-select: none;
+}
+
+.fb-header-logo-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #329b9e, #b087dc);
+}
+
+.fb-header-logo-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1a202c, #4a5568);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ================= SEARCH ================= */
+.fb-header-search-section {
+    max-width: 420px;
+    width: 100%;
+}
+
+.fb-header-search-wrapper {
+    position: relative;
+}
+
+.fb-header-search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+}
+
+.fb-header-search-input {
+    width: 100%;
+    height: 44px;
+    padding: 0 18px 0 48px;
+    border-radius: 22px;
+    border: 1.5px solid #e2e8f0;
+    outline: none;
+}
+
+.fb-header-search-input:focus {
+    border-color: #4F63D2;
+    box-shadow: 0 0 0 4px rgba(79,99,210,0.08);
+}
+
+/* ================= ACTIONS ================= */
+.fb-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.fb-header-icon-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1.5px solid #e2e8f0;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.fb-header-icon-btn:hover {
+    background: #f1f5f9;
+}
+
+/* Badge */
+.fb-header-notification-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 10px;
+    height: 10px;
+    background: #ef4444;
+    border-radius: 50%;
+}
+
+/* ================= FRIEND MENU ================= */
+.fb-header-friend-menu-wrapper {
+    position: relative;
+}
+
+.fb-header-friend-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 220px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    z-index: 1200;
+    overflow: hidden;
+}
+
+.fb-header-friend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    cursor: pointer;
+}
+
+.fb-header-friend-item:hover {
+    background: #f1f5f9;
+}
+
+/* ================= USER ================= */
+.fb-header-divider {
+    width: 1px;
+    height: 28px;
+    background: #e2e8f0;
+    margin: 0 6px;
+}
+
+.fb-header-username {
+    display: flex;
+    gap: 4px;
+    font-weight: 600;
+}
+
+.fb-header-at {
+    color: #64748b;
+}
+
+/* ================= PROFILE ================= */
+.fb-header-profile-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.fb-header-profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================= DROPDOWN ================= */
+.fb-header-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    min-width: 200px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    z-index: 1300;
+    padding: 6px;
+}
+
+.fb-header-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 8px;
+}
+
+.fb-header-dropdown-item:hover {
+    background: #f1f5f9;
+}
+
+.fb-header-dropdown-divider {
+    height: 1px;
+    background: #e2e8f0;
+    margin: 6px 0;
+}
+
+/* ================= FRIEND MODAL ================= */
+.fb-header-friend-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1600;
+    display: grid;
+    place-items: center;
+}
+
+.fb-header-modal-content {
+    background: #fff;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 820px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.fb-header-modal-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.fb-header-modal-close {
+    font-size: 22px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* ================= INBOX ================= */
+.fb-header-inbox-modal {
+    position: fixed;
+    top: 76px;
+    right: 80px;
+    width: 360px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+    z-index: 1500;
+    overflow: hidden;
+}
+
+.fb-header-inbox-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.fb-header-inbox-item:hover {
+    background: #f8fafc;
+}
+
+.fb-header-inbox-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.fb-header-inbox-link {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
+.fb-header-inbox-name {
+    font-weight: 600;
+}
+
+.fb-header-inbox-last {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.fb-header-inbox-empty {
+    padding: 16px;
+    text-align: center;
+    color: #64748b;
+}
+/* ================= MOBILE RESPONSIVE (<= 768px) ================= */
+@media (max-width: 768px) {
+
+    .fb-header {
+        height: 56px;
+        padding: 0 12px;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+    }
+
+    /* LOGO */
+    .fb-header-logo-text {
+        display: none;
+    }
+
+    .fb-header-logo-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 12px;
+    }
+
+    /* SEARCH */
+    .fb-header-search-section {
+        display: none;
+    }
+
+    /* ACTIONS */
+    .fb-header-actions {
+        gap: 6px;
+        margin-left: 200px;
+    }
+
+    .fb-header-icon-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* USERNAME */
+    .fb-header-username {
+        display: none;
+    }
+
+    .fb-header-divider {
+        display: none;
+    }
+
+    /* PROFILE */
+    .fb-header-profile-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* DROPDOWN */
+    .fb-header-dropdown {
+        right: 8px;
+        min-width: 180px;
+    }
+
+    /* FRIEND MENU */
+    .fb-header-friend-menu {
+        right: 8px;
+        width: 200px;
+    }
+
+    /* INBOX */
+    .fb-header-inbox-modal {
+        top: 64px;
+        right: 8px;
+        width: calc(100vw - 16px);
+        max-width: 380px;
+    }
+}
+/* ================= FRIEND MODAL BODY ================= */
+.fb-header-modal-body {
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* ================= FRIEND ROW ================= */
+.fb-header-friend-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    border-radius: 14px;
+    background: #f8fafc;
+    transition: background 0.2s ease;
+}
+
+.fb-header-friend-row:hover {
+    background: #eef2ff;
+}
+
+/* Avatar */
+.fb-header-friend-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Info */
+.fb-header-friend-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.fb-header-friend-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.fb-header-friend-date {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+/* ================= ACTIONS ================= */
+.fb-header-friend-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Approve */
+.fb-header-approve-btn {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    background: #4f46e5;
+    color: #fff;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.fb-header-approve-btn:hover {
+    background: #4338ca;
+}
+
+/* Decline */
+.fb-header-decline-btn {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    background: #e5e7eb;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.fb-header-decline-btn:hover {
+    background: #d1d5db;
+}
+
+/* ================= STATUS TEXT ================= */
+.fb-header-text-approved {
+    font-size: 0.75rem;
+    color: #16a34a;
+    font-weight: 600;
+}
+
+.fb-header-text-refused {
+    font-size: 0.75rem;
+    color: #dc2626;
+    font-weight: 600;
+}

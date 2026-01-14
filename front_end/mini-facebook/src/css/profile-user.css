@@ -1,0 +1,298 @@
+.profile-user-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 18px;
+    color: #65676b;
+}
+
+.profile-user-container {
+    min-height: 100vh;
+    background: #F5F6F8;
+}
+
+/* Header Section */
+.profile-user-header {
+    background: #F5F6F8;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.profile-user-cover-photo {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-color: #F5F6F8;
+}
+
+.profile-user-cover-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-user-info-section {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.profile-user-info-wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 16px;
+}
+
+.profile-user-avatar-container {
+    position: relative;
+    margin-top: -80px;
+    margin-right: 16px;
+}
+
+.profile-user-avatar {
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background-color: white;
+    object-fit: cover;
+}
+
+.profile-user-details {
+    flex: 1;
+    padding-top: 20px;
+}
+
+.profile-user-name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #050505;
+    margin: 0 0 4px 0;
+}
+
+.profile-user-username {
+    font-size: 15px;
+    color: #65676b;
+    margin: 0 0 8px 0;
+}
+
+.profile-user-bio {
+    font-size: 15px;
+    color: #050505;
+    margin: 0;
+}
+
+.profile-user-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 20px;
+    margin-left: auto;
+}
+
+.profile-user-message-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #0866ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.profile-user-message-btn:hover {
+    background-color: #0654d4;
+}
+
+.profile-user-message-btn svg {
+    flex-shrink: 0;
+}
+
+.profile-user-btn-more {
+    background-color: #e4e6eb;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #050505;
+}
+
+.profile-user-btn-more:hover {
+    background-color: #d8dadf;
+}
+
+/* Content Area */
+.profile-user-content-area {
+    max-width: 680px;
+    margin: 16px auto;
+    padding: 0 16px;
+}
+
+.profile-user-posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Create Post Box */
+.profile-user-create-post-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 12px 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-user-small-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-user-post-input {
+    flex: 1;
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+.profile-user-post-input:hover {
+    background-color: #e4e6eb;
+}
+
+/* Post Card */
+.profile-user-post-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.profile-user-post-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 12px;
+}
+
+.profile-user-post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-user-post-user-info {
+    flex: 1;
+}
+
+.profile-user-post-user-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #050505;
+    margin: 0 0 2px 0;
+}
+
+.profile-user-post-time {
+    font-size: 13px;
+    color: #65676b;
+    margin: 0;
+}
+
+.profile-user-post-menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #65676b;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.profile-user-post-menu-btn:hover {
+    background-color: #f0f2f5;
+}
+
+.profile-user-post-content {
+    padding: 0 16px 12px 16px;
+}
+
+.profile-user-post-content p {
+    font-size: 15px;
+    color: #050505;
+    margin: 0;
+    line-height: 1.3333;
+}
+
+.profile-user-post-image {
+    width: 100%;
+    background-color: #000;
+}
+
+.profile-user-post-image img {
+    width: 100%;
+    display: block;
+}
+
+.profile-user-post-actions {
+    display: flex;
+    border-top: 1px solid #e4e6eb;
+    padding: 4px 16px;
+}
+
+.profile-user-action-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #65676b;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.profile-user-action-btn:hover {
+    background-color: #f0f2f5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-user-cover-photo {
+        height: 250px;
+    }
+
+    .profile-user-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-user-avatar-container {
+        margin-top: -60px;
+    }
+
+    .profile-user-name {
+        font-size: 24px;
+    }
+}
+.profile-user-link{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}

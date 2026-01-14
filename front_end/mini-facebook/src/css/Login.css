@@ -1,0 +1,298 @@
+/* ===============================
+   RESET & BASE
+   =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    background: #f4f3ff;
+    color: #1f2937;
+}
+
+/* ===============================
+   PAGE BACKGROUND – PURPLE LIQUID
+   =============================== */
+.login-container {
+    min-height: 100vh;
+    background:
+            radial-gradient(
+                    650px 420px at 12% 8%,
+                    rgba(196, 181, 253, 0.45),
+                    transparent 60%
+            ),
+            radial-gradient(
+                    520px 380px at 88% 82%,
+                    rgba(221, 214, 254, 0.5),
+                    transparent 65%
+            ),
+            radial-gradient(
+                    420px 300px at 50% 55%,
+                    rgba(233, 229, 255, 0.35),
+                    transparent 70%
+            ),
+            linear-gradient(
+                    180deg,
+                    #faf9ff 0%,
+                    #f3f1ff 45%,
+                    #ece9ff 100%
+            );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+/* ===============================
+   CARD – GLASSMORPHISM
+   =============================== */
+.login-card {
+    width: 100%;
+    max-width: 480px;
+    background: rgba(255, 255, 255, 0.68);
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+    border-radius: 20px;
+    padding: 2.6rem 2.4rem;
+
+    border: 1px solid rgba(180, 165, 255, 0.25);
+
+    box-shadow:
+            0 30px 60px rgba(124, 58, 237, 0.15),
+            inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* ===============================
+   TITLE
+   =============================== */
+.login-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1e1b4b;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ===============================
+   FORM
+   =============================== */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 1.4rem;
+}
+
+label {
+    font-size: 0.85rem;
+    color: #5b5f9e;
+}
+
+/* ===============================
+   INPUT
+   =============================== */
+.form-input {
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    border: 1px solid #e1dcff;
+    background: rgba(255, 255, 255, 0.85);
+    color: #1e1b4b;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.form-input::placeholder {
+    color: #9b9bcf;
+}
+
+.form-input:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.25);
+}
+
+.form-input.error {
+    border-color: #fda4af;
+}
+
+/* ===============================
+   PASSWORD
+   =============================== */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper .form-input {
+    padding-right: 3rem;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #8b87c9;
+    transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+    color: #6d28d9;
+}
+
+/* ===============================
+   ERROR
+   =============================== */
+.error-message {
+    font-size: 0.8rem;
+    color: #e11d48;
+}
+
+.server-error {
+    background: rgba(225, 29, 72, 0.08);
+    color: #be123c;
+    border: 1px solid rgba(225, 29, 72, 0.2);
+    padding: 0.75rem 0.9rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+}
+
+/* ===============================
+   FORGOT PASSWORD
+   =============================== */
+.forgot-password {
+    margin-top: 0.45rem;
+    text-align: right;
+}
+
+.forgot-password a {
+    font-size: 0.8rem;
+    color: #7c3aed;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   BUTTON
+   =============================== */
+/* ===============================
+   BUTTON – SOFT PURPLE, KHÔNG CHÓI
+   =============================== */
+.login-btn {
+    width: 100%;
+    padding: 0.95rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+
+    background: linear-gradient(
+            135deg,
+            #8b7cf0,
+            #9f91f7
+    );
+
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    margin-top: 1.6rem;
+
+    box-shadow:
+            0 10px 24px rgba(139, 124, 240, 0.35);
+
+    transition: all 0.25s ease;
+}
+
+.login-btn:hover {
+    background: linear-gradient(
+            135deg,
+            #9b8df5,
+            #b4a9fb
+    );
+
+    transform: translateY(-1px);
+
+    box-shadow:
+            0 14px 32px rgba(139, 124, 240, 0.45);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+
+    box-shadow:
+            0 8px 18px rgba(139, 124, 240, 0.3);
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+.register-footer {
+    text-align: center;
+    margin-top: 1.6rem;
+    font-size: 0.85rem;
+    color: #5b5f9e;
+}
+
+.register-footer a {
+    color: #7c3aed;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.register-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 2rem 1.6rem;
+        border-radius: 18px;
+    }
+
+    .login-title {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .login-card {
+        padding: 1.6rem 1.2rem;
+    }
+}
+.login-card {
+    position: relative;
+    z-index: 10;
+
+    width: 100%;
+    max-width: 480px;
+
+    background: rgba(255, 255, 255, 0.62);
+    backdrop-filter: blur(26px) saturate(160%);
+    -webkit-backdrop-filter: blur(26px) saturate(160%);
+
+    border-radius: 22px;
+    padding: 2.6rem 2.4rem;
+
+    border: 1px solid rgba(180, 165, 255, 0.28);
+
+    box-shadow:
+            0 40px 80px rgba(124, 58, 237, 0.25),
+            0 20px 40px rgba(124, 58, 237, 0.18),
+            inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+

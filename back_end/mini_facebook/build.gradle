@@ -1,0 +1,73 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'org.springframework.boot' version '3.3.4'
+    id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+description = 'mini_facebook'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // ===== WEB =====
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+    // ===== SECURITY =====
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+
+    // ===== DATA =====
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
+    // ===== VALIDATION =====
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // ===== WEBSOCKET =====
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
+    // ===== JWT (ỔN ĐỊNH) =====
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.5'
+
+    // ===== REDIS + CACHE =====
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+
+    // ===== MAIL =====
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+    // ===== CLOUDINARY =====
+    implementation 'com.cloudinary:cloudinary-http44:1.39.0'
+
+    // ===== LOMBOK =====
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // ===== WAR =====
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+    // ===== TEST =====
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
